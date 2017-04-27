@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<module>
+  <Login f="nodata">
+    <Login>
+
+    </Login>
+  </Login>
+  <Control>
+    <Main>
+      <Create_New_Site t="button" f="nocertainty noannotation" l="Site"/>
+      <Existing_Sites t="list" f="nocertainty noannotation" e="Site"/>
+    </Main>
+    <search/>
+    <map>
+      Map
+    </map>
+  </Control>
+  <Site>
+    <Location>
+      <author>
+      </author>
+      <timestamp>
+        Site Recorded at
+      </timestamp>
+      <State t="dropdown"/>
+      <Nearest_Town_Surburb b="string">
+        Nearest Town / Surburb
+      </Nearest_Town_Surburb>
+      <gps>
+        GPS Coordinates
+      </gps>
+      <Other_Location_Info b="string"/>
+      <Access_Instructions b="string"/>
+      <Site_Name_Aboriginal b="string"/>
+      <Site_Name_English b="string"/>
+      <Access_is_this_site t="dropdown">
+        Access / Is this site...
+      </Access_is_this_site>
+    </Location>
+    <Description>
+      <Site_Type t="checkbox"/>
+      <Site_Size b="decimal">
+        Site Size (estimate)
+      </Site_Size>
+      <Number_of_Shelters b="decimal"/>
+      <Number_of_Panels b="decimal"/>
+      <Number_of_Motifs b="decimal">
+        Number of Motifs (total)
+      </Number_of_Motifs>
+      <Site_Condition t="dropdown"/>
+      <Conservation_Issues b="string"/>
+    </Description>
+    <Infrastructure>
+      <Encouraging_Access t="checkbox"/>
+      <Protecting_Site t="checkbox"/>
+    </Infrastructure>
+    <Visit>
+      <New_Visit/>
+      <Existing_visits/>
+    </Visit>
+    <Tourism>
+      <New_Tourism_Company/>
+      <Existing_Tourism_Companies/>
+    </Tourism>
+  </Site>
+  <Site_Visit>
+    <Experience>
+      <Site_Name/>
+      <author>
+      </author>
+      <timestamp>
+        Site Visited
+      </timestamp>
+      <Type_of_Visit/>
+      <Guide_Type/>
+      <Interpretation/>
+      <Overall_Quality/>
+      <Overall_Satisfaction/>
+      <Notes/>
+    </Experience>
+    <Facilities>
+      <Access_Encouragement/>
+      <Encouragement_Comments/>
+      <Site_Protection/>
+      <Protection_Comments/>
+      <General_Notes/>
+    </Facilities>
+  </Site_Visit>
+  <Tourism_Company>
+    <General>
+      <Company_Name/>
+      <Degree_of_Aboriginal_Involvement/>
+      <Contact_Details/>
+      <Company_Comments/>
+    </General>
+  </Tourism_Company>
+</module>
