@@ -2,43 +2,82 @@
 <module>
   <Login f="nodata">
     <Login>
-
+      <Users t="dropdown" f="user nocertainty noannotation"/>
+      <Log_in  t="button"/>
+      <Sign_up t="button"/>
     </Login>
   </Login>
-  <Control>
+  <Control f="nodata">
     <Main>
       <Create_New_Site t="button" f="nocertainty noannotation" l="Site"/>
       <Existing_Sites t="list" f="nocertainty noannotation" e="Site"/>
     </Main>
     <search/>
-    <map>
-      Map
-    </map>
+    <Map t="map"/>
   </Control>
   <Site>
     <Location>
-      <author>
+      <author f="nocertainty noannotation">
       </author>
-      <timestamp>
+      <timestamp f="nocertainty noannotation">
         Site Recorded at
       </timestamp>
-      <State t="dropdown"/>
-      <Nearest_Town_Surburb b="string">
+      <State t="dropdown">
+        <opts>
+          <opt>NSW</opt>
+          <opt>QLD</opt>
+          <opt>VIC</opt>
+          <opt>WA</opt>
+          <opt>NT</opt>
+          <opt>SA</opt>
+          <opt>TAS</opt>
+          <opt>ACT</opt>
+        </opts>
+      </State>
+      <Nearest_Town_Surburb b="string" f="id">
         Nearest Town / Surburb
+        <str>
+          <pos>1</pos>
+          <fmt>$2- </fmt>
+        </str>
       </Nearest_Town_Surburb>
       <gps>
         GPS Coordinates
       </gps>
       <Other_Location_Info b="string"/>
       <Access_Instructions b="string"/>
-      <Site_Name_Aboriginal b="string"/>
-      <Site_Name_English b="string"/>
+      <Site_Name_Aboriginal b="string" f="id">
+        <str>
+          <pos>2</pos>
+          <fmt>$2 - </fmt>
+        </str>
+      </Site_Name_Aboriginal>
+      <Site_Name_English b="string" f="id">
+        <str>
+          <pos>3</pos>
+          <fmt>$2</fmt>
+        </str>
+      </Site_Name_English>
       <Access_is_this_site t="dropdown">
         Access / Is this site...
+        <opts>
+          <opt>Open to independent (self-guided) visitors?</opt>
+          <opt>Accessible only with a guide (exclusive to one tourism operator)</opt>
+          <opt>Accessible only with a guide (choice/more than one tourism operator)</opt>
+        </opts>
       </Access_is_this_site>
     </Location>
     <Description>
-      <Site_Type t="checkbox"/>
+      <Site_Type t="checkbox">
+        <opts>
+          <opt>Rock Art – paintings</opt>
+          <opt>Rock Art - Engravings</opt>
+          <opt>Human remains/Burials</opt>
+          <opt>Artefact Scatter</opt>
+          <opt>Place of cultural significance</opt>
+          <opt>Other</opt>
+        </opts>
+      </Site_Type>
       <Site_Size b="decimal">
         Site Size (estimate)
       </Site_Size>
@@ -47,51 +86,194 @@
       <Number_of_Motifs b="decimal">
         Number of Motifs (total)
       </Number_of_Motifs>
-      <Site_Condition t="dropdown"/>
+      <Site_Condition t="dropdown">
+        <opts>
+          <opt>Excellent</opt>
+          <opt>Good</opt>
+          <opt>Fair</opt>
+          <opt>Poor</opt>
+          <opt>Very Poor</opt>
+        </opts>
+      </Site_Condition>
       <Conservation_Issues b="string"/>
     </Description>
     <Infrastructure>
-      <Encouraging_Access t="checkbox"/>
-      <Protecting_Site t="checkbox"/>
+      <Encouraging_Access t="checkbox">
+        <opts>
+          <opt>Toilets</opt>
+          <opt>Boardwalk/viewing platform</opt>
+          <opt>Fencing (protecting humans)</opt>
+          <opt>Interpretive signs</opt>
+          <opt>Stairs</opt>
+          <opt>Wheelchair access</opt>
+          <opt>Picnic shelter</opt>
+          <opt>Carpark</opt>
+          <opt>Kiosk</opt>
+          <opt>Water</opt>
+          <opt>Road signs/direction signs to site</opt>
+        </opts>
+        </Encouraging_Access>
+      <Protecting_Site t="checkbox">
+        <opts>
+          <opt>Boardwalk/viewing platform</opt>
+          <opt>Fencing (protecting rock art)</opt>
+          <opt>Fencing (protecting other aspects of site)</opt>
+          <opt>Interpretive signs</opt>
+        </opts>
+      </Protecting_Site>
+      <Photos t="camera"/>
     </Infrastructure>
-    <Visit>
-      <New_Visit/>
-      <Existing_visits/>
+    <Visit f="noscroll">
+      <New_Visit t="button" f="nocertainty noannotation" lc="Site_Visit"/>
+      <Existing_visits t="list" f="nocertainty noannotation" ec="Site_Visit"/>
     </Visit>
-    <Tourism>
-      <New_Tourism_Company/>
-      <Existing_Tourism_Companies/>
+    <Tourism f="noscroll">
+      <New_Tourism_Company t="button" f="nocertainty noannotation" lc="Tourism_Company"/>
+      <Existing_Tourism_Companies t="list" f="nocertainty noannotation" ec="Tourism_Company"/>
     </Tourism>
   </Site>
   <Site_Visit>
     <Experience>
-      <Site_Name/>
-      <author>
+      <Site_Name f="id nocertainty noannotation" i="Site/Location/Site_Name_English">
+        <str>
+          <pos>1</pos>
+          <fmt>$2: </fmt>
+        </str>
+      </Site_Name>
+      <author f="id nocertainty noannotation">
+        <str>
+          <pos>2</pos>
+          <fmt>$2 - </fmt>
+        </str>
       </author>
-      <timestamp>
+      <timestamp f="id nocertainty noannotation">
         Site Visited
+        <str>
+          <pos>3</pos>
+          <fmt>$2</fmt>
+        </str>
       </timestamp>
-      <Type_of_Visit/>
-      <Guide_Type/>
-      <Interpretation/>
-      <Overall_Quality/>
-      <Overall_Satisfaction/>
-      <Notes/>
+      <Type_of_Visit t="dropdown">
+        <opts>
+          <opt>Independently/ Self-Guided</opt>
+          <opt>Guided by an Indigenous Guide</opt>
+          <opt>Guided by a non-Indigenous Guide</opt>
+          <opt>Other</opt>
+        </opts>
+      </Type_of_Visit>
+      <Guide_Type t="dropdown">
+        <opts>
+          <opt>Indigenous Guide</opt>
+          <opt>Non Indigenous Guide</opt>
+          <opt>Unsure</opt>
+        </opts>
+      </Guide_Type>
+      <Interpretation t="checkbox">
+        <opts>
+          <opt>Talked about motifs</opt>
+          <opt>Talked about method/materials/how created</opt>
+          <opt>Talked about culture</opt>
+          <opt>Talked about contemporary life</opt>
+          <opt>Connect rock-art to other ideas/events/landscapes/plants and animals</opt>
+          <opt>Bushfoods</opt>
+          <opt>Sang songs</opt>
+          <opt>Danced</opt>
+          <opt>Demonstrated something</opt>
+          <opt>Used humour</opt>
+          <opt>Was serious</opt>
+          <opt>Talked to ancestors</opt>
+          <opt>Introduced visitors to country</opt>
+        </opts>
+        </Interpretation>
+      <Overall_Quality b="string"/>
+      <Overall_Satisfaction b="string"/>
+      <Notes b="string"/>
     </Experience>
     <Facilities>
-      <Access_Encouragement/>
-      <Encouragement_Comments/>
-      <Site_Protection/>
-      <Protection_Comments/>
-      <General_Notes/>
+      <Access_Encouragement t="checkbox">
+        <opts>
+          <opt>Appropriate for site</opt>
+          <opt>Inappropriate for site</opt>
+          <opt>Effective at encouraging visitors</opt>
+          <opt>Ineffective at encouraging visitors</opt>
+        </opts>
+      </Access_Encouragement>
+      <Encouragement_Comments b="string"/>
+      <Site_Protection t="checkbox">
+        <opts>
+          <opt>Appropriate for site</opt>
+          <opt>Inappropriate for site</opt>
+          <opt>Effective at protecting site</opt>
+          <opt>Ineffective at protecting site</opt>
+        </opts>
+      </Site_Protection>
+      <Protection_Comments b="string"/>
+      <General_Notes b="string"/>
+      <Photos t="camera"/>
     </Facilities>
   </Site_Visit>
   <Tourism_Company>
     <General>
-      <Company_Name/>
-      <Degree_of_Aboriginal_Involvement/>
-      <Contact_Details/>
-      <Company_Comments/>
+      <Company_Name b="string" f="id">
+        <str>
+          <pos>1</pos>
+          <fmt>$2: </fmt>
+        </str>
+      </Company_Name>
+      <Degree_of_Aboriginal_Involvement t="checkbox">
+        <opts>
+          <opt>Aboriginal Owned</opt>
+          <opt>Employs Aboriginal Guides</opt>
+          <opt>Unknown / Unsufficient Information</opt>
+        </opts>
+      </Degree_of_Aboriginal_Involvement>
+      <Contact_Details b="string"/>
+      <Company_Comments b="string"/>
     </General>
   </Tourism_Company>
+
+<logic><![CDATA[
+  /*********************************** LOGIN ************************************/
+    // Overrides autogenerated definition
+    selectUser () {
+      String userVocabId  = getFieldValue(userMenuPath);
+      if (isNull(userVocabId))
+        return;
+      String userQ = "SELECT userid,fname,lname,email,password FROM user " +
+                     "WHERE  userid='" + userVocabId + "';";
+      FetchCallback callback = new FetchCallback() {
+        onFetch(result) {
+          user = new User(
+                result.get(0),
+                result.get(1),
+                result.get(2),
+                result.get(3),
+                result.get(4)
+          );
+          setUser(user);
+          username = result.get(1) + " " + result.get(2);
+        }
+      };
+      fetchOne(userQ, callback);
+    }
+    onClickLogin () {
+      showVerifyUserDialog("doUserLogin()");
+    }
+    onClickSignup () {
+      setSyncEnabled(true);
+      showCreateUserDialog("signupSuccessful()");
+    }
+    signupSuccessful() {
+      String head  = "Signup Successful";
+      String body  = "You have successfuly signed up. You may now log in as the ";
+             body += "newly created user.";
+      showWarning(head, body);
+      populateListForUsers();
+    }
+    doUserLogin () {
+      newTab("Control", true);
+    }
+    addOnEvent("Login/Login/Log_in",  "click", "onClickLogin()");
+    addOnEvent("Login/Login/Sign_up", "click", "onClickSignup()");
+]]></logic>
 </module>
