@@ -1,0 +1,532 @@
+<?xml version='1.0' encoding='utf-8'?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:jr="http://openrosa.org/javarosa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>FILL THIS IN</h:title>
+    <model>
+      <instance>
+        <faims id="FILL_THIS_IN">
+          <!--START: Style-->
+          <style>
+            <orientation>
+              <orientation/>
+            </orientation>
+            <even>
+              <layout_weight/>
+            </even>
+            <large>
+              <layout_weight/>
+            </large>
+          </style>
+          <!--END: Style-->
+          <Login>
+            <Login>
+              <Users/>
+              <Log_in/>
+              <Signup_Guide_1/>
+              <Sign_up/>
+            </Login>
+          </Login>
+          <Control>
+            <Main>
+              <Create_New_Site/>
+              <Existing_Sites/>
+            </Main>
+            <Search>
+              <Colgroup_0>
+                <Col_0>
+                  <Search_Term/>
+                </Col_0>
+                <Col_1>
+                  <Search_Button/>
+                </Col_1>
+              </Colgroup_0>
+              <Entity_Types/>
+              <Entity_List/>
+            </Search>
+            <Map>
+              <Map/>
+              <Center_Me_1/>
+            </Map>
+          </Control>
+          <Site>
+            <Location>
+              <Site_author/>
+              <Site_timestamp/>
+              <State/>
+              <Nearest_Town_Surburb/>
+              <Colgroup_1>
+                <Col_1>
+                  <Latitude/>
+                </Col_1>
+                <Col_2>
+                  <Longitude/>
+                </Col_2>
+              </Colgroup_1>
+              <Colgroup_2>
+                <Col_1>
+                  <Northing/>
+                </Col_1>
+                <Col_2>
+                  <Easting/>
+                </Col_2>
+                <Col_3>
+                  <Accuracy/>
+                </Col_3>
+              </Colgroup_2>
+              <Take_From_GPS_1/>
+              <Other_Location_Info/>
+              <Access_Instructions/>
+              <Site_Name_Aboriginal/>
+              <Site_Name_English/>
+              <Access_is_this_site/>
+            </Location>
+            <Description>
+              <Site_Type/>
+              <Site_Size/>
+              <Number_of_Shelters/>
+              <Number_of_Panels/>
+              <Number_of_Motifs/>
+              <Site_Condition/>
+              <Conservation_Issues/>
+            </Description>
+            <Infrastructure>
+              <Encouraging_Access/>
+              <Protecting_Site/>
+              <Photos/>
+              <Photos_Button_1/>
+            </Infrastructure>
+            <Visit>
+              <New_Visit/>
+              <Existing_visits/>
+            </Visit>
+            <Tourism>
+              <New_Tourism_Company/>
+              <Existing_Tourism_Companies/>
+            </Tourism>
+          </Site>
+          <Site_Visit>
+            <Experience>
+              <Site_Name/>
+              <Site_Visit_author/>
+              <Site_Visit_timestamp/>
+              <Type_of_Visit/>
+              <Guide_Type/>
+              <Interpretation/>
+              <Overall_Quality/>
+              <Overall_Satisfaction/>
+              <Notes/>
+            </Experience>
+            <Facilities>
+              <Access_Encouragement/>
+              <Encouragement_Comments/>
+              <Site_Protection/>
+              <Protection_Comments/>
+              <General_Notes/>
+              <Photos/>
+              <Photos_Button_1/>
+            </Facilities>
+          </Site_Visit>
+          <Tourism_Company>
+            <General>
+              <Company_Name/>
+              <Degree_of_Aboriginal_Involvement/>
+              <Contact_Details/>
+              <Company_Comments/>
+            </General>
+          </Tourism_Company>
+        </faims>
+      </instance>
+      <bind nodeset="/faims/Site/Location/Nearest_Town_Surburb" type="string"/>
+      <bind nodeset="/faims/Site/Location/Other_Location_Info" type="string"/>
+      <bind nodeset="/faims/Site/Location/Access_Instructions" type="string"/>
+      <bind nodeset="/faims/Site/Location/Site_Name_Aboriginal" type="string"/>
+      <bind nodeset="/faims/Site/Location/Site_Name_English" type="string"/>
+      <bind nodeset="/faims/Site/Description/Site_Size" type="decimal"/>
+      <bind nodeset="/faims/Site/Description/Number_of_Shelters" type="decimal"/>
+      <bind nodeset="/faims/Site/Description/Number_of_Panels" type="decimal"/>
+      <bind nodeset="/faims/Site/Description/Number_of_Motifs" type="decimal"/>
+      <bind nodeset="/faims/Site/Description/Conservation_Issues" type="string"/>
+      <bind nodeset="/faims/Site_Visit/Experience/Overall_Quality" type="string"/>
+      <bind nodeset="/faims/Site_Visit/Experience/Overall_Satisfaction" type="string"/>
+      <bind nodeset="/faims/Site_Visit/Experience/Notes" type="string"/>
+      <bind nodeset="/faims/Site_Visit/Facilities/Encouragement_Comments" type="string"/>
+      <bind nodeset="/faims/Site_Visit/Facilities/Protection_Comments" type="string"/>
+      <bind nodeset="/faims/Site_Visit/Facilities/General_Notes" type="string"/>
+      <bind nodeset="/faims/Tourism_Company/General/Company_Name" type="string"/>
+      <bind nodeset="/faims/Tourism_Company/General/Contact_Details" type="string"/>
+      <bind nodeset="/faims/Tourism_Company/General/Company_Comments" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <!--START: Style-->
+    <group ref="style">
+      <label/>
+      <group ref="orientation">
+        <label/>
+        <input ref="orientation">
+          <label>horizontal</label>
+        </input>
+      </group>
+      <group ref="even">
+        <label/>
+        <input ref="layout_weight">
+          <label>1</label>
+        </input>
+      </group>
+      <group ref="large">
+        <label/>
+        <input ref="layout_weight">
+          <label>3</label>
+        </input>
+      </group>
+    </group>
+    <!--END: Style-->
+    <group ref="Login">
+      <label>{Login}</label>
+      <group ref="Login">
+        <label>{Login}</label>
+        <select1 ref="Users">
+          <label>{Users}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <trigger ref="Log_in">
+          <label>{Log_in}</label>
+        </trigger>
+        <input faims_web="true" ref="Signup_Guide_1">
+          <label/>
+        </input>
+        <trigger ref="Sign_up">
+          <label>{Sign_up}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="Control">
+      <label>{Control}</label>
+      <group ref="Main" faims_scrollable="false">
+        <label>{Main}</label>
+        <trigger ref="Create_New_Site">
+          <label>{Create_New_Site}</label>
+        </trigger>
+        <select1 appearance="compact" ref="Existing_Sites">
+          <label>{Existing_Sites}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="Search" faims_scrollable="false">
+        <label>{Search}</label>
+        <group ref="Colgroup_0" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input ref="Search_Term">
+              <label>{Search_Term}</label>
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="large">
+            <label/>
+            <trigger ref="Search_Button">
+              <label>{Search}</label>
+            </trigger>
+          </group>
+        </group>
+        <select1 ref="Entity_Types">
+          <label>{Entity_Types}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select1 appearance="compact" ref="Entity_List">
+          <label>{Entity_List}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="Map" faims_scrollable="false">
+        <label>{Map}</label>
+        <input faims_map="true" ref="Map">
+          <label>{Map}</label>
+        </input>
+        <trigger ref="Center_Me_1">
+          <label>{Center_Me}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="Site" faims_archent_type="Site">
+      <label>{Site}</label>
+      <group ref="Location">
+        <label>{Location}</label>
+        <input faims_attribute_name="Site author" faims_attribute_type="measure" ref="Site_author" faims_read_only="true">
+          <label>{Site_author}</label>
+        </input>
+        <input faims_attribute_name="Site timestamp" faims_attribute_type="measure" ref="Site_timestamp" faims_read_only="true">
+          <label>{Site_Recorded_at}</label>
+        </input>
+        <select1 faims_attribute_name="State" faims_attribute_type="vocab" ref="State">
+          <label>{State}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <input faims_attribute_name="Nearest Town Surburb" faims_attribute_type="measure" ref="Nearest_Town_Surburb">
+          <label>{Nearest_Town___Surburb}</label>
+        </input>
+        <group ref="Colgroup_1" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Latitude" faims_attribute_type="measure" ref="Latitude" faims_read_only="true">
+              <label>{Latitude}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Longitude" faims_attribute_type="measure" ref="Longitude" faims_read_only="true">
+              <label>{Longitude}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_2" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Northing" faims_attribute_type="measure" ref="Northing" faims_read_only="true">
+              <label>{Northing}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Easting" faims_attribute_type="measure" ref="Easting" faims_read_only="true">
+              <label>{Easting}</label>
+            </input>
+          </group>
+          <group ref="Col_3" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Accuracy" faims_attribute_type="measure" ref="Accuracy" faims_read_only="true">
+              <label>{Accuracy}</label>
+            </input>
+          </group>
+        </group>
+        <trigger ref="Take_From_GPS_1">
+          <label>{Take_From_GPS}</label>
+        </trigger>
+        <input faims_attribute_name="Other Location Info" faims_attribute_type="measure" ref="Other_Location_Info">
+          <label>{Other_Location_Info}</label>
+        </input>
+        <input faims_attribute_name="Access Instructions" faims_attribute_type="measure" ref="Access_Instructions">
+          <label>{Access_Instructions}</label>
+        </input>
+        <input faims_attribute_name="Site Name Aboriginal" faims_attribute_type="measure" ref="Site_Name_Aboriginal">
+          <label>{Site_Name_Aboriginal}</label>
+        </input>
+        <input faims_attribute_name="Site Name English" faims_attribute_type="measure" ref="Site_Name_English">
+          <label>{Site_Name_English}</label>
+        </input>
+        <select1 faims_attribute_name="Access is this site" faims_attribute_type="vocab" ref="Access_is_this_site">
+          <label>{Access___Is_this_site___}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="Description">
+        <label>{Description}</label>
+        <select faims_attribute_name="Site Type" faims_attribute_type="vocab" ref="Site_Type">
+          <label>{Site_Type}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <input faims_attribute_name="Site Size" faims_attribute_type="measure" ref="Site_Size">
+          <label>{Site_Size__estimate_}</label>
+        </input>
+        <input faims_attribute_name="Number of Shelters" faims_attribute_type="measure" ref="Number_of_Shelters">
+          <label>{Number_of_Shelters}</label>
+        </input>
+        <input faims_attribute_name="Number of Panels" faims_attribute_type="measure" ref="Number_of_Panels">
+          <label>{Number_of_Panels}</label>
+        </input>
+        <input faims_attribute_name="Number of Motifs" faims_attribute_type="measure" ref="Number_of_Motifs">
+          <label>{Number_of_Motifs__total_}</label>
+        </input>
+        <select1 faims_attribute_name="Site Condition" faims_attribute_type="vocab" ref="Site_Condition">
+          <label>{Site_Condition}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <input faims_attribute_name="Conservation Issues" faims_attribute_type="measure" ref="Conservation_Issues">
+          <label>{Conservation_Issues}</label>
+        </input>
+      </group>
+      <group ref="Infrastructure">
+        <label>{Infrastructure}</label>
+        <select faims_attribute_name="Encouraging Access" faims_attribute_type="vocab" ref="Encouraging_Access">
+          <label>{Encouraging_Access}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <select faims_attribute_name="Protecting Site" faims_attribute_type="vocab" ref="Protecting_Site">
+          <label>{Protecting_Site}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <select faims_sync="true" type="camera" faims_attribute_name="Photos" faims_attribute_type="measure" ref="Photos">
+          <label>{Photos}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <trigger ref="Photos_Button_1">
+          <label>{Photos}</label>
+        </trigger>
+      </group>
+      <group ref="Visit" faims_scrollable="false">
+        <label>{Visit}</label>
+        <trigger ref="New_Visit">
+          <label>{New_Visit}</label>
+        </trigger>
+        <select1 appearance="compact" ref="Existing_visits">
+          <label>{Existing_visits}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="Tourism" faims_scrollable="false">
+        <label>{Tourism}</label>
+        <trigger ref="New_Tourism_Company">
+          <label>{New_Tourism_Company}</label>
+        </trigger>
+        <select1 appearance="compact" ref="Existing_Tourism_Companies">
+          <label>{Existing_Tourism_Companies}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <group ref="Site_Visit" faims_archent_type="Site Visit">
+      <label>{Site_Visit}</label>
+      <group ref="Experience">
+        <label>{Experience}</label>
+        <input faims_attribute_name="Site Name" faims_attribute_type="measure" ref="Site_Name">
+          <label>{Site_Name}</label>
+        </input>
+        <input faims_attribute_name="Site Visit author" faims_attribute_type="measure" ref="Site_Visit_author" faims_read_only="true">
+          <label>{Site_Visit_author}</label>
+        </input>
+        <input faims_attribute_name="Site Visit timestamp" faims_attribute_type="measure" ref="Site_Visit_timestamp" faims_read_only="true">
+          <label>{Site_Visited}</label>
+        </input>
+        <select1 faims_attribute_name="Type of Visit" faims_attribute_type="vocab" ref="Type_of_Visit">
+          <label>{Type_of_Visit}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_name="Guide Type" faims_attribute_type="vocab" ref="Guide_Type">
+          <label>{Guide_Type}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select faims_attribute_name="Interpretation" faims_attribute_type="vocab" ref="Interpretation">
+          <label>{Interpretation}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <input faims_attribute_name="Overall Quality" faims_attribute_type="measure" ref="Overall_Quality">
+          <label>{Overall_Quality}</label>
+        </input>
+        <input faims_attribute_name="Overall Satisfaction" faims_attribute_type="measure" ref="Overall_Satisfaction">
+          <label>{Overall_Satisfaction}</label>
+        </input>
+        <input faims_attribute_name="Notes" faims_attribute_type="measure" ref="Notes">
+          <label>{Notes}</label>
+        </input>
+      </group>
+      <group ref="Facilities">
+        <label>{Facilities}</label>
+        <select faims_attribute_name="Access Encouragement" faims_attribute_type="vocab" ref="Access_Encouragement">
+          <label>{Access_Encouragement}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <input faims_attribute_name="Encouragement Comments" faims_attribute_type="measure" ref="Encouragement_Comments">
+          <label>{Encouragement_Comments}</label>
+        </input>
+        <select faims_attribute_name="Site Protection" faims_attribute_type="vocab" ref="Site_Protection">
+          <label>{Site_Protection}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <input faims_attribute_name="Protection Comments" faims_attribute_type="measure" ref="Protection_Comments">
+          <label>{Protection_Comments}</label>
+        </input>
+        <input faims_attribute_name="General Notes" faims_attribute_type="measure" ref="General_Notes">
+          <label>{General_Notes}</label>
+        </input>
+        <select faims_sync="true" type="camera" faims_attribute_name="Photos" faims_attribute_type="measure" ref="Photos">
+          <label>{Photos}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <trigger ref="Photos_Button_1">
+          <label>{Photos}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="Tourism_Company" faims_archent_type="Tourism Company">
+      <label>{Tourism_Company}</label>
+      <group ref="General">
+        <label>{General}</label>
+        <input faims_attribute_name="Company Name" faims_attribute_type="measure" ref="Company_Name">
+          <label>{Company_Name}</label>
+        </input>
+        <select faims_attribute_name="Degree of Aboriginal Involvement" faims_attribute_type="vocab" ref="Degree_of_Aboriginal_Involvement">
+          <label>{Degree_of_Aboriginal_Involvement}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <input faims_attribute_name="Contact Details" faims_attribute_type="measure" ref="Contact_Details">
+          <label>{Contact_Details}</label>
+        </input>
+        <input faims_attribute_name="Company Comments" faims_attribute_type="measure" ref="Company_Comments">
+          <label>{Company_Comments}</label>
+        </input>
+      </group>
+    </group>
+  </h:body>
+</h:html>

@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dataSchema>
+  <RelationshipElement name="Site - Site Visit" type="hierarchical">
+    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
+    <parent>Parent Of</parent>
+    <child>Child Of</child>
+  </RelationshipElement>
+  <RelationshipElement name="Site - Tourism Company" type="hierarchical">
+    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
+    <parent>Parent Of</parent>
+    <child>Child Of</child>
+  </RelationshipElement>
+  <ArchaeologicalElement name="Site">
+    <description></description>
+    <property name="Nearest Town Surburb" type="measure" isIdentifier="true">
+      <description></description>
+      <formatString>$2:</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Site Name Aboriginal" type="measure" isIdentifier="true">
+      <description></description>
+      <formatString>$2-</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Site Name English" type="measure" isIdentifier="true">
+      <description></description>
+      <formatString>$2</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Site author" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Site timestamp" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="State" type="vocab">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{NSW}
+<description></description></term>
+        <term>{QLD}
+<description></description></term>
+        <term>{VIC}
+<description></description></term>
+        <term>{WA}
+<description></description></term>
+        <term>{NT}
+<description></description></term>
+        <term>{SA}
+<description></description></term>
+        <term>{TAS}
+<description></description></term>
+        <term>{ACT}
+<description></description></term>
+      </lookup>
+    </property>
+    <property name="Latitude" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Longitude" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Northing" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Easting" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Accuracy" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Other Location Info" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Access Instructions" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Access is this site" type="vocab">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Open_to_independent__self_guided__visitors_}
+<description></description></term>
+        <term>{Accessible_only_with_a_guide__exclusive_to_one_tourism_operator_}
+<description></description></term>
+        <term>{Accessible_only_with_a_guide__choice_more_than_one_tourism_operator_}
+<description></description></term>
+      </lookup>
+    </property>
+    <property name="Site Type" type="vocab">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Rock_Art___paintings}
+<description></description></term>
+        <term>{Rock_Art___Engravings}
+<description></description></term>
+        <term>{Human_remains_Burials}
+<description></description></term>
+        <term>{Artefact_Scatter}
+<description></description></term>
+        <term>{Place_of_cultural_significance}
+<description></description></term>
+        <term>{Other}
+<description></description></term>
+      </lookup>
+    </property>
+    <property name="Site Size" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Number of Shelters" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Number of Panels" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Number of Motifs" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Site Condition" type="vocab">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Excellent}
+<description></description></term>
+        <term>{Good}
+<description></description></term>
+        <term>{Fair}
+<description></description></term>
+        <term>{Poor}
+<description></description></term>
+        <term>{Very_Poor}
+<description></description></term>
+      </lookup>
+    </property>
+    <property name="Conservation Issues" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Encouraging Access" type="vocab">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Toilets}
+<description></description></term>
+        <term>{Boardwalk_viewing_platform}
+<description></description></term>
+        <term>{Fencing__protecting_humans_}
+<description></description></term>
+        <term>{Interpretive_signs}
+<description></description></term>
+        <term>{Stairs}
+<description></description></term>
+        <term>{Wheelchair_access}
+<description></description></term>
+        <term>{Picnic_shelter}
+<description></description></term>
+        <term>{Carpark}
+<description></description></term>
+        <term>{Kiosk}
+<description></description></term>
+        <term>{Water}
+<description></description></term>
+        <term>{Road_signs_direction_signs_to_site}
+<description></description></term>
+      </lookup>
+    </property>
+    <property name="Protecting Site" type="vocab">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Boardwalk_viewing_platform}
+<description></description></term>
+        <term>{Fencing__protecting_rock_art_}
+<description></description></term>
+        <term>{Fencing__protecting_other_aspects_of_site_}
+<description></description></term>
+        <term>{Interpretive_signs}
+<description></description></term>
+      </lookup>
+    </property>
+    <property name="Photos" type="file" file="true" thumbnail="true">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Site Visit">
+    <description></description>
+    <property name="Site Name" type="measure" isIdentifier="true">
+      <description></description>
+      <formatString>$2:</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Site Visit author" type="measure" isIdentifier="true">
+      <description></description>
+      <formatString>$2-</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Site Visit timestamp" type="measure" isIdentifier="true">
+      <description></description>
+      <formatString>$2</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Type of Visit" type="vocab">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Independently__Self_Guided}
+<description></description></term>
+        <term>{Guided_by_an_Indigenous_Guide}
+<description></description></term>
+        <term>{Guided_by_a_non_Indigenous_Guide}
+<description></description></term>
+        <term>{Other}
+<description></description></term>
+      </lookup>
+    </property>
+    <property name="Guide Type" type="vocab">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Indigenous_Guide}
+<description></description></term>
+        <term>{Non_Indigenous_Guide}
+<description></description></term>
+        <term>{Unsure}
+<description></description></term>
+      </lookup>
+    </property>
+    <property name="Interpretation" type="vocab">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Talked_about_motifs}
+<description></description></term>
+        <term>{Talked_about_method_materials_how_created}
+<description></description></term>
+        <term>{Talked_about_culture}
+<description></description></term>
+        <term>{Talked_about_contemporary_life}
+<description></description></term>
+        <term>{Connect_rock_art_to_other_ideas_events_landscapes_plants_and_animals}
+<description></description></term>
+        <term>{Bushfoods}
+<description></description></term>
+        <term>{Sang_songs}
+<description></description></term>
+        <term>{Danced}
+<description></description></term>
+        <term>{Demonstrated_something}
+<description></description></term>
+        <term>{Used_humour}
+<description></description></term>
+        <term>{Was_serious}
+<description></description></term>
+        <term>{Talked_to_ancestors}
+<description></description></term>
+        <term>{Introduced_visitors_to_country}
+<description></description></term>
+      </lookup>
+    </property>
+    <property name="Overall Quality" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Overall Satisfaction" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Notes" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Access Encouragement" type="vocab">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Appropriate_for_site}
+<description></description></term>
+        <term>{Inappropriate_for_site}
+<description></description></term>
+        <term>{Effective_at_encouraging_visitors}
+<description></description></term>
+        <term>{Ineffective_at_encouraging_visitors}
+<description></description></term>
+      </lookup>
+    </property>
+    <property name="Encouragement Comments" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Site Protection" type="vocab">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Appropriate_for_site}
+<description></description></term>
+        <term>{Inappropriate_for_site}
+<description></description></term>
+        <term>{Effective_at_protecting_site}
+<description></description></term>
+        <term>{Ineffective_at_protecting_site}
+<description></description></term>
+      </lookup>
+    </property>
+    <property name="Protection Comments" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="General Notes" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Photos" type="file" file="true" thumbnail="true">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Tourism Company">
+    <description></description>
+    <property name="Company Name" type="measure" isIdentifier="true">
+      <description></description>
+      <formatString>$2</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Degree of Aboriginal Involvement" type="vocab">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Aboriginal_Owned}
+<description></description></term>
+        <term>{Employs_Aboriginal_Guides}
+<description></description></term>
+        <term>{Unknown___Unsufficient_Information}
+<description></description></term>
+      </lookup>
+    </property>
+    <property name="Contact Details" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Company Comments" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+  </ArchaeologicalElement>
+</dataSchema>
