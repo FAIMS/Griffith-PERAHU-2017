@@ -38,13 +38,19 @@ If you have any questions about the module, please contact the FAIMS team at **e
 ## Screenshots:
 
 <p align="left">
-  <img src="xxx" width="250"/>
-  <img src="xxx" width="250"/>
-  <img src="xxx" width="250"/>
+  <img src="https://github.com/FAIMS/Griffith-PERAHU-2017/blob/master/screenshots/Screenshot_20170913-140654.png" width="250"/>
+  <img src="https://github.com/FAIMS/Griffith-PERAHU-2017/blob/master/screenshots/Screenshot_20170913-140925.png" width="250"/>
+  <img src="https://github.com/FAIMS/Griffith-PERAHU-2017/blob/master/screenshots/Screenshot_20170913-140931.png" width="250"/>
 </p>
 
 <p align="left">
- <img src="xxx" width="250"/>
-  <img src="xxx" width="250"/>
-  <img src="xxx" width="250"/>
+ <img src="https://github.com/FAIMS/Griffith-PERAHU-2017/blob/master/screenshots/Screenshot_20170913-140950.png" width="250"/>
+  <img src="https://github.com/FAIMS/Griffith-PERAHU-2017/blob/master/screenshots/Screenshot_20170913-140955.png" width="250"/>
+  <img src="https://github.com/FAIMS/Griffith-PERAHU-2017/blob/master/screenshots/Screenshot_20170913-141002.png" width="250"/>
+</p>
+
+<p align="left">
+ <img src="https://github.com/FAIMS/Griffith-PERAHU-2017/blob/master/screenshots/Screenshot_20170913-141019.png" width="250"/>
+  <img src="https://github.com/FAIMS/Griffith-PERAHU-2017/blob/master/screenshots/Screenshot_20170913-141033.png" width="250"/>
+  <img src="https://github.com/FAIMS/Griffith-PERAHU-2017/blob/master/screenshots/Screenshot_20170913-141108.png" width="250"/>
 </p>
